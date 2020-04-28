@@ -1,0 +1,380 @@
+/*Start global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #ffffff; 
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+img{
+    width: 75%;
+    border-radius: 5%;
+}
+/*End global*/
+
+/*Start reusable*/
+.container{
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.has-margin-right{
+    margin-right: 5rem;
+}
+/*End reusable*/
+
+/*Start header*/
+header{
+    width: 100%;
+    height: 18vh;
+    background: #ffffff;
+
+}
+
+.top-nav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    z-index: 50;
+    background: linear-gradient(to top, #232526, #414345);
+    opacity: .97;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+}
+
+.nav-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 1rem;
+}
+
+.nav-link{
+    font-family: 'Monaco', sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.icon-nav{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    word-spacing: .3rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background: linear-gradient(to top, #0F2027, #203A43, #2C5364);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+/*End Header*/
+
+
+/*Start about*/
+.about{
+    background: #42874a;
+}
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading{
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.about-heading h1{
+    margin-top: 3rem;
+    font-size: 4rem;
+    opacity: .7;
+}
+
+.about-heading h6{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.intro-heading h2{
+    font-size: 5rem;
+    opacity: .7;
+}
+
+.profile-img{
+    flex: 1;
+    margin-right: 5rem;
+}
+
+.about-details{
+    flex: 1;
+}
+
+.about-details p{
+    margin-top: 3rem;
+    line-height: 3.5rem;
+}
+
+.about-details p:last-child{
+    margin-bottom: 6rem;
+}
+
+/*End about*/
+
+/*Start footer*/
+.social-media{
+    margin-top: 1rem;
+}
+
+.social-media i{
+    font-size: 3rem;
+    transition: all 650ms;
+}
+
+.fa-facebook-square:hover{
+    color: #4267b2;
+}
+
+.fa-twitter-square:hover{
+    color: #38a1f3;
+}
+
+.fa-instagram-square:hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #54b05f;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i{
+    color: #16162d;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.copyright p{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+/*End footer*/
+
+/*Start animations*/
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(67,206,162, 0.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(67,206,162, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(67,206,162, 0);
+    }
+}
+/*End animations*/
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+    .landing-text h1{
+        font-size: 5rem;
+    }
+
+    .landing-text h6{
+        font-size: 1.7rem;
+    }
+
+    .icon-nav{
+        flex-direction: row;
+    }
+
+    li{
+        margin: 0 1rem;
+    }
+
+    .nav-link{
+        font-size: 4.5rem;
+    }
+
+    .nav-list{
+        flex-direction: row;
+    }
+
+    .about .container{
+        flex-direction: column;
+    }
+
+    .profile-img{
+        margin: 0 0 7rem 0;
+        margin-top: 3rem;
+    }
+
+    .about-heading h1{
+        font-size: 4rem;
+    }
+
+    .section-heading h1{
+        font-size: 3rem;
+    }
+
+    .about-details .nav-list{
+        flex-direction: initial;
+    }
+
+    .about-details li{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .icon-container i{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .landing-text h1{
+        font-size: 4rem;
+    }
+
+    .landing-text h6{
+        font-size: 1.4rem;
+    }
+
+    .nav-link{
+        font-size: 3.5rem;
+    }
+
+    .about .container{
+        flex-direction: column;
+    }
+
+    .profile-img{
+        margin: 0 0 7rem 0;
+        margin-top: 3rem;
+    }
+
+    .up{
+        right: 2rem;
+    }
+}
