@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <meta name="description" content="My personal website." />
+    <meta property="og:title" content="Pablo Torres" />
+    <meta property="og:image" content="apple-touch-icon.png" />
+
+    <title>Pablo Torres - Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/6b0a85d544.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="img-container">
+            <nav class="bottom-nav">
+                <a href="#skills" class="arrow-down"></a>
+            </nav>
+        </div>
+        <div class="menu-toggler">
+            <div class="bar half start"></div>
+            <div class="bar"></div>
+            <div class="bar half end"></div>
+        </div>
+        <nav class="top-nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="index" class="nav-link">Work</a>
+                </li>
+                <li>
+                    <a href="about" class="nav-link">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="landing-text">
+            <h1>Pablo Torres</h1>
+            <h6>UI | UX Designer</h6>
+        </div>
+    </header>
+
+    <section class="skills" id="skills">
+        <div class="container">
+
+            <div class="my-skills">
+                <skill-card name="Web Design" data-aos="fade-in" data-aos-delay="300">
+                    <i class="fas fa-layer-group" slot="icon"></i>
+                    <div slot="description">I can redesign your website.</div>
+                </skill-card>
+                <skill-card name="Web Development" data-aos="fade-in" data-aos-delay="600">
+                    <i class="fas fa-code" slot="icon"></i>
+                    <div slot="description">I can can build a website for you or your business.</div>
+                </skill-card>
+                <skill-card name="Product Design" data-aos="fade-in" data-aos-delay="900">
+                    <i class="fas fa-drafting-compass" slot="icon"></i>
+                    <div slot="description">I can create a high-fidelity prototype.</div>
+                </skill-card>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+
+            <div class="portfolio-item">
+                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+                    <a href="http://personal.psu.edu/pyt5086/blog.html">
+                        <img alt="A blog" src="images/blog.png">
+                    </a>
+                </div>
+                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+                    <h6>Web Development</h6>
+                    <h1>Kombucha Blog Website</h1>
+                    <p>I created this blog for a web design class at Penn State. It is very minimal and was one of my first websites I have created.
+                    </p>
+                    <a href="http://personal.psu.edu/pyt5086/blog.html" class="cta">View Details</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
+                    <h6>Product Design</h6>
+                    <h1>Penn State Live Prototype</h1>
+                    <p>I developed this prototype for a Human Centered Design class at Penn State. The prototype is of a mobile application that Penn State students could use to stay up to date with events going on around campus.
+
+                    </p>
+                    <a href="https://xd.adobe.com/view/83aa455c-70f2-4ca9-664b-0c44286e7cf8-f59b/" class="cta">View Details</a>
+                </div>
+                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+                    <a href="https://xd.adobe.com/view/83aa455c-70f2-4ca9-664b-0c44286e7cf8-f59b/">
+                        <img alt="A prototype" src="images/psu.png">
+                    </a>
+                </div>
+
+            </div>
+            <!-- <div class="portfolio-item">
+                                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+                                    <img src="images-portitem3.jpeg" alt="">
+                                </div>
+                                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
+                                    <h6>Web Design</h6>
+                                    <h1>Product Sketch</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error sunt mollitia accusamus dolores sapiente excepturi? Illo libero consequuntur totam minima distinctio nostrum aspernatur, excepturi maxime, perferendis exercitationem fuga perspiciatis.</p>
+                                    <a href="#" class="cta">View Details</a>
+                                </div>
+                            </div>     -->
+        </div>
+    </section>
+
+    <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="social-media">
+            <ul class="icon-nav">
+                <p>Follow Me:</p>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100007630696818" class="icon-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/pabtowers/" class="icon-link">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>&copy; 2020 Pablo Torres</p>
+    </footer>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="main.js"></script>
+<script src="skillCard.js"></script>
+
+</html>
