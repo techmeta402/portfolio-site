@@ -1,11 +1,6 @@
-import { LitElement, html, css } from "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/lit-element/lit-element.js";
-
-class SkillCard extends LitElement {
-    static get tag() {
-        return 'skill-card';
-    }
-    static get styles() {
-        return [css`
+const template = document.createElement('template');
+template.innerHTML = `
+<style>
 .skill-card{
     display: flex;
     flex-direction: column;
@@ -46,28 +41,34 @@ class SkillCard extends LitElement {
 .skill-card p{
     font-size: 1.8rem;
     font-weight: 300;
-}`];
-    }
+}
+</style>
 
-    render() {
-        return html`
-<div class="skill-card">
-    <div class="icon-container">
-        <i><slot name="icon" /></i>
+
+<div class = "skill-card">
+    <div class = "icon-container">
+        <i><slot name = "icon" /></i>
     </div>
-    <h1>${this.name}</h1>
-    <p><slot name="description" /></p>
-</div>`;
-    }
-    static get properties() {
-        return {
-            name: {
-                type: String
-            }
-        };
+    <h1></h1>
+    <p><slot name = "description" /></p>
+</div>
+
+`;
+
+class SkillCard extends HTMLElement {
+    constructor() {
+        super();
+
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        
+        this.shadowRoot.querySelector('i');
+        
+        this.shadowRoot.querySelector('h1').innerText = 
+        this.getAttribute('name');
+            
     }
 }
 
-window.customElements.define(SkillCard.tag, SkillCard);
 
-export {SkillCard};
+customElements.define('skill-card', SkillCard);
