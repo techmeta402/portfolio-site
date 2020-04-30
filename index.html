@@ -7,7 +7,7 @@
     <meta name="description" content="My personal website." />
     <meta property="og:title" content="Pablo Torres" />
     <meta property="og:image" content="apple-touch-icon.png" />
-    <link rel="modulepreload" href="skillCard.js"/>
+
     <title>Pablo Torres - Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -69,7 +69,6 @@
 
     <section class="portfolio" id="portfolio">
         <div class="container">
-
             <div class="portfolio-item">
                 <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
                     <a href="http://personal.psu.edu/pyt5086/blog.html">
@@ -77,11 +76,9 @@
                     </a>
                 </div>
                 <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
-                    <h6>Web Development</h6>
-                    <h1>Kombucha Blog Website</h1>
-                    <p>I created this blog for a web design class at Penn State. It is very minimal and was one of my first websites I have created.
-                    </p>
-                    <a href="http://personal.psu.edu/pyt5086/blog.html" class="cta">View Details</a>
+                    <project-card job = "Web Development" project = "Kombucha Blog Website" link = "http://personal.psu.edu/pyt5086/blog.html" text = "View Details">
+                        <div slot="description">I created this blog for a web design class at Penn State. It is very minimal and was one of my first websites I have created.</div>
+                    </project-card>
                 </div>
             </div>
             <div class="portfolio-item">
@@ -100,7 +97,17 @@
                 </div>
 
             </div>
-
+            <!-- <div class="portfolio-item">
+                                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+                                    <img src="images-portitem3.jpeg" alt="">
+                                </div>
+                                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
+                                    <h6>Web Design</h6>
+                                    <h1>Product Sketch</h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error sunt mollitia accusamus dolores sapiente excepturi? Illo libero consequuntur totam minima distinctio nostrum aspernatur, excepturi maxime, perferendis exercitationem fuga perspiciatis.</p>
+                                    <a href="#" class="cta">View Details</a>
+                                </div>
+                            </div>     -->
         </div>
     </section>
 
@@ -126,12 +133,10 @@
         <p>&copy; 2020 Pablo Torres</p>
     </footer>
 
-
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="main.js"></script>
-<script type="module" src="skillCard.js"></script>
-
+<script src="skillCard.js"></script>
+<script src="projectCard.js"></script>
 </html>
